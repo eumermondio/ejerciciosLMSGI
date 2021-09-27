@@ -1,4 +1,4 @@
- <!ELEMENT placasBase (componentes, fabricante)>
+ <!ELEMENT placasbase (componentes, fabricante)>
  <!ELEMENT componentes (microprocesador, memoria, modelo)>
  <!ELEMENT fabricante (asus?, intel?)>
  <!ELEMENT microprocesador (#PCDATA)>

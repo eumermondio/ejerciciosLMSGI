@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE placasBase SYSTEM "Ejercicio01DTD.dtd">
+<!DOCTYPE placasbase SYSTEM "Ejercicio01DTD.dtd">
 
-<placasBase>
+<placasbase>
     <componentes>
         <microprocesador>AMD R5 3600</microprocesador>
         <memoria>DDR4 3200MHz</memoria>
-        <modelo>MSI B450M PRO VDH_MAX</modelo>
+        <modelo>MSI B450M PRO VDH MAX</modelo>
     </componentes>
     <fabricante>
         <asus/>
     </fabricante>
-</placasBase>
+</placasbase>
