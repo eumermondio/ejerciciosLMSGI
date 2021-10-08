@@ -1,0 +1,17 @@
+<!ELEMENT musica (artistas, canciones, nacionalidades)*>
+
+<!ELEMENT artistas (artista)*>
+<!ELEMENT canciones (cancion)*>
+<!ELEMENT nacionalidades (nacionalidad)*>
+
+<!ELEMENT artista EMPTY>
+<!ELEMENT cancion EMPTY>
+<!ELEMENT nacionalidad (#PCDATA)>
+
+<!ATTLIST artista nombre ID #REQUIRED
+                    fechaNacimiento CDATA #REQUIRED
+                    nacionalidad IDREF #REQUIRED>
+<!ATTLIST cancion nombre NMTOKENS #REQUIRED
+                    duracion CDATA #REQUIRED
+                    artista IDREF #REQUIRED>
+<!ATTLIST nacionalidad codigo ID #REQUIRED>

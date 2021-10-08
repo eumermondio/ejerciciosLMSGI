@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE musica SYSTEM "Ejercicio02DTD.dtd">
+
+<musica>
+    <artistas>
+        <artista nombre="Pepe" fechaNacimiento="1978" nacionalidad="ES" />
+        <artista nombre="Antonio" fechaNacimiento="1980" nacionalidad="FR" />
+    </artistas>
+    <canciones>
+        <cancion nombre="Dos" duracion="34" artista="Pepe" />
+        <cancion nombre="Tres" duracion="31" artista="Antonio" />
+    </canciones>
+    <nacionalidades>
+        <nacionalidad codigo="ES">Española</nacionalidad>
+        <nacionalidad codigo="FR">Francesa</nacionalidad>
+    </nacionalidades>
+</musica>
