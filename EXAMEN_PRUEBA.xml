@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales [
+<!ELEMENT animales (animal)*>
+<!ELEMENT animal (#PCDATA | especie | alimentacion)*>
+<!ATTLIST animal nombre CDATA #REQUIRED>
+<!ATTLIST animal tipoAdn IDREF #FIXED >
+<!ELEMENT especie (adn, arn)>
+<!ELEMENT adn EMPTY>
+<!ATTLIST adn code ID #REQUIRED>
+<!ELEMENT arn (#PCDATA)>
+<!ATTLIST especie tipo (oviparo | viviparo) "viviparo">
+<!ELEMENT alimentacion EMPTY>
+<!ATTLIST alimentacion tipo (carne | verdura | deTodo) "carne">
+
+]>
+
+<animales>
+   <animal nombre="Leon" tipoAdn="hexcode">3
+       <alimentacion tipo="carne"/>
+       <especie tipo="oviparo">
+           <adn code="hexcode" />
+           <arn />
+       </especie>
+   </animal>
+
+   <animal nombre="Gato" tipoAdn="hexcode">56
+<especie>
+    <adn code="hola" />
+    <arn>No</arn>
+</especie>
+<alimentacion />
+   </animal>
+
+   <animal nombre="Puma" tipoAdn="hola">f
+
+   </animal>
+</animales>
