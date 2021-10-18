@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE animales [
-<!ELEMENT animales (animal)*>
+<!ELEMENT animales (animal?, noIdentificado?)+>
 <!ELEMENT animal (#PCDATA | especie | alimentacion)*>
+<!ELEMENT noIdentificado EMPTY>
 <!ATTLIST animal nombre CDATA #REQUIRED>
-<!ATTLIST animal tipoAdn IDREF #FIXED >
+<!ATTLIST animal tipoAdn IDREFS #REQUIRED >
+<!ATTLIST noIdentificado tipoAdn IDREF #FIXED "hola">
 <!ELEMENT especie (adn, arn)>
 <!ELEMENT adn EMPTY>
-<!ATTLIST adn code ID #REQUIRED>
+<!ATTLIST adn code ID #IMPLIED>
 <!ELEMENT arn (#PCDATA)>
 <!ATTLIST especie tipo (oviparo | viviparo) "viviparo">
 <!ELEMENT alimentacion EMPTY>
 <!ATTLIST alimentacion tipo (carne | verdura | deTodo) "carne">
+<!ENTITY pran "Leon">
 
 ]>
 
 <animales>
-   <animal nombre="Leon" tipoAdn="hexcode">3
-       <alimentacion tipo="carne"/>
-       <especie tipo="oviparo">
-           <adn code="hexcode" />
-           <arn />
-       </especie>
-   </animal>
+    <animal nombre="&pran;" tipoAdn="hexcode hola">3
+        <alimentacion tipo="carne"/>
+        <especie tipo="oviparo">
+            <adn code="hexcode" />
+            <arn />
+        </especie>
+    </animal>
 
-   <animal nombre="Gato" tipoAdn="hexcode">56
-<especie>
-    <adn code="hola" />
-    <arn>No</arn>
-</especie>
-<alimentacion />
-   </animal>
+    <animal nombre="Gato" tipoAdn="hexcode">56
+        <especie tipo="viviparo">
+            <adn code="hola" />
+            <arn>No</arn>
+        </especie>
+        <alimentacion />
+    </animal>
 
-   <animal nombre="Puma" tipoAdn="hola">f
-
-   </animal>
+    <animal nombre="Puma" tipoAdn="hola">f
+        <alimentacion tipo="carne"/>
+        <especie tipo="oviparo">
+            <adn code="hexcod" />
+            <arn />
+        </especie>
+    </animal>
+    <noIdentificado tipoAdn="hola"/>
 </animales>
