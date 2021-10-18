@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE placasbase SYSTEM "dragonball.dtd">
+<dragonBall>
+    <personajes>
+        <personaje nombre="Goku" edad="56">
+            <estado>Vivo</estado>
+            <enemigo nombre="Goku2"/>
+            <amigo nombre="Vegeta" estado="Muerto">
+                <estatus>Retirado</estatus>
+            </amigo>
+        </personaje>
+        <personaje nombre="Krilin" edad="57">
+            <estado>Muerto</estado>
+            <enemigo nombre="Goku8"/>
+            <amigo nombre="Bulma" estado="Vivo">
+                <estatus>Activo</estatus>
+            </amigo>
+        </personaje>
+    </personajes>
+    <episodio nombre="Episodio1" idEp="fnjd"/>
+</dragonBall>

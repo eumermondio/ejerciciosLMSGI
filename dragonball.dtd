@@ -1,0 +1,6 @@
+<!ELEMENT dragonBall (personajes, episodio)+>
+<!ELEMENT personajes (personaje)?>
+
+<!ELEMENT episodio EMPTY>
+<!ATTLIST episodio nombre CDATA #IMPLIED
+                   idEp ID #REQUIRED>
