@@ -1,6 +1,27 @@
-<!ELEMENT dragonBall (personajes, episodio)+>
-<!ELEMENT personajes (personaje)?>
+<!ENTITY % nombreGral "nombre CDATA #REQUIRED">
+
+<!ELEMENT dragonBall (personajes, episodio?)+>
+<!ELEMENT personajes (personaje)*>
 
 <!ELEMENT episodio EMPTY>
-<!ATTLIST episodio nombre CDATA #IMPLIED
-                   idEp ID #REQUIRED>
+<!ATTLIST episodio %nombreGral;
+                   idEp ID #REQUIRED
+                   idEep ID #REQUIRED>
+
+<!ELEMENT personaje (estado | (enemigo | amigo))*>
+<!ATTLIST personaje %nombreGral;
+                    edad CDATA #IMPLIED
+                    episodio IDREFS #REQUIRED>
+
+<!ELEMENT estado (#PCDATA | nulo)*>
+<!ELEMENT nulo EMPTY>
+
+<!ELEMENT enemigo EMPTY>
+<!ATTLIST enemigo nombre CDATA #FIXED "Vegeta"
+                  habilidad (mala | buena | muyBuena) "mala">
+
+<!ELEMENT amigo (estatus)>
+<!ATTLIST amigo %nombreGral;
+                estado CDATA #REQUIRED>
+
+<!ELEMENT estatus (#PCDATA)>
