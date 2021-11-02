@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE monstruos SYSTEM "monstruos.dtd">
+<monstruos>
+
+    <monstruo cod="uno" episodios="eptres epuno" amigo="dos">
+        monstruo1
+        <tipo />
+        <caracteristicas>
+            <escudo tieneEscudo="si" vidaEscudo="13000" loUsa="noSeSabe"/>
+        </caracteristicas>
+    </monstruo>
+
+    <monstruo cod="dos" episodios="epdos" amigo="uno">
+        monstruo2
+        <caracteristicas>
+            <vida cantidad="847356"/>
+        </caracteristicas>
+    </monstruo>
+
+    <episodios codE="epuno">
+        <continuado />
+    </episodios>
+
+    <episodios codE="epdos">
+        <descontinuado />
+    </episodios>
+
+    <episodios codE="eptres">
+        <continuado />
+    </episodios>
+
+</monstruos>

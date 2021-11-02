@@ -1,0 +1,26 @@
+<!ENTITY % reqcdata "CDATA #REQUIRED">
+
+<!ELEMENT monstruos (monstruo | episodios)+>
+<!ELEMENT monstruo (#PCDATA | tipo | caracteristicas)*>
+<!ATTLIST monstruo cod ID #REQUIRED>
+<!ATTLIST monstruo episodios IDREFS #REQUIRED>
+<!ATTLIST monstruo amigo IDREF #REQUIRED>
+
+
+<!ELEMENT episodios (continuado | descontinuado)>
+<!ATTLIST episodios codE ID #IMPLIED>
+
+<!ELEMENT continuado EMPTY>
+<!ELEMENT descontinuado EMPTY>
+
+
+<!ELEMENT tipo EMPTY>
+<!ELEMENT caracteristicas (vida | escudo)?>
+<!ELEMENT vida EMPTY>
+<!ATTLIST vida cantidad %reqcdata;>
+
+
+<!ELEMENT escudo EMPTY>
+<!ATTLIST escudo vidaEscudo %reqcdata;>
+<!ATTLIST escudo tieneEscudo CDATA #FIXED "si">
+<!ATTLIST escudo loUsa (si | no | noSeSabe) "si">
