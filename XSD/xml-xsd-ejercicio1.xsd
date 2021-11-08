@@ -16,7 +16,7 @@
       <xs:element name="calle" type="xs:string"/>
       <xs:element name="numero" type="tipoNumero"/>
       <xs:element name="ciudad" type="xs:string"/>
-      <xs:element name="provincia" type="xs:string"/>
+      <xs:element name="provincia" type="tipoProvincia"/>
     </xs:all>
   </xs:complexType>
 
@@ -27,9 +27,23 @@
   </xs:simpleType>
 
   <xs:simpleType name="tipoNumero">
-<xs:restriction base="xs:string">
-  <xs:pattern value=".*\d+.*"/>
-</xs:restriction>
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".*\d+.*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoProvincia">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Álava"/>
+      <xs:enumeration value="Álmeria"/>
+      <xs:enumeration value="Badajoz"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoProvinciaDos">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Álava | Almería | Badajoz"></xs:pattern>
+    </xs:restriction>
   </xs:simpleType>
 
 </xs:schema>
