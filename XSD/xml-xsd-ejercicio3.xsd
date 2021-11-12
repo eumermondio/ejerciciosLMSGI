@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura" type="tipoFactura"/>
+    <xs:complexType name="tipoFactura">
+        <xs:all>
+            <xs:element name="datos_empresa" type="tipoDatosEmpresa"/>
+            <xs:element name="datos_cliente" type="tipoDatosCliente"/>
+            <xs:element name="datos_factura" type="tipoDatosFactura"/>
+        </xs:all>
+        <xs:attribute name="n_fac" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="tipoDatosEmpresa">
+        <xs:all>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="poblacion" type="xs:string"/>
+            <xs:element name="provincia" type="xs:string"/>
+            <xs:element name="dir" type="xs:string"/>
+            <xs:element name="cif" type="xs:string"/>
+            <xs:element name="telefono" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="tipoDatosCliente">
+        <xs:all>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="poblacion" type="xs:string"/>
+            <xs:element name="provincia" type="xs:string"/>
+            <xs:element name="dir_env" type="xs:string"/>
+        </xs:all>
+        <xs:attribute name="n_cli" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="tipoDatosFactura">
+        <xs:sequence>
+            <xs:element name="fecha" type="xs:string"/>
+            <xs:element name="linea" type="tipoLinea" maxOccurs="unbounded"/>
+            <xs:element name="base" type="xs:string"/>
+            <xs:element name="cuota_iva" type="xs:string"/>
+            <xs:element name="total" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="n_ped" type="xs:string"/>
+        <xs:attribute name="iva" type="xs:string"/>
+        <xs:attribute name="f_pago" type="xs:string"/>
+        <xs:attribute name="moneda" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="tipoLinea">
+        <xs:all>
+            <xs:element name="ref" type="xs:string"/>
+            <xs:element name="desc" type="xs:string"/>
+            <xs:element name="cant" type="xs:string"/>
+            <xs:element name="precio" type="xs:string"/>
+            <xs:element name="importe" type="xs:string"/>
+
+        </xs:all>
+    </xs:complexType>
+
+</xs:schema>
