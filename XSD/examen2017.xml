@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<losSimpson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="examen2017.xsd">
+    <personajes>
+        <personaje nombre="Homer" edad="45"/>
+A
+        <personaje nombre="Hoer" edad="5"/>
+12
+        <personaje nombre="Mer" edad="495"/>
+B
+    </personajes>
+
+    <episodios>
+        <episodio nombre="G">
+            <continuado/>
+        </episodio>
+    </episodios>
+
+    <secuela>
+        <duracion duracion="300"/>
+    </secuela>
+    <secuela>
+        <duracion duracion="300"/>
+        <noPublica duracion="550"/>
+        <id id="AB3GA"/>
+        <idioma>Ingles Chino Chinese Indian</idioma>
+        <idiomaAux>Español</idiomaAux>
+    </secuela>
+</losSimpson>

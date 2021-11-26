@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="losSimpson" type="tipoS"/>
+    <xs:complexType name="tipoS">
+        <xs:choice>
+            <xs:element name="episodios" type="tipoEpisodios"/>
+            <xs:element name="secuela" type="tipoSecuela"/>
+            <xs:element name="personajes" type="tipoPers"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="tipoPers" mixed="true">
+        <xs:sequence>
+            <xs:element name="personaje" type="tipoPersonaje" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoPersonaje">
+        <xs:attribute name="nombre" type="xs:string"/>
+        <xs:attribute name="edad" type="xs:integer"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipoEpisodios">
+        <xs:sequence>
+            <xs:element name="episodio" type="tipoEpisodio"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoEpisodio">
+        <xs:choice>
+            <xs:element name="descontinuado" type="tipoContinuado"/>
+            <xs:element name="continuado" type="tipoContinuado"/>
+        </xs:choice>
+        <xs:attribute name="nombre" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipoContinuado"/>
+
+    <xs:complexType name="tipoSecuela">
+        <xs:sequence>
+            <xs:element name="noPublica" minOccurs="0" type="tipoValor"/>
+            <xs:element name="idioma" minOccurs="0" type="tipoIdioma"/>
+            <xs:element name="idiomaAux" minOccurs="0" type="tipoIdioma"/>
+            <xs:element name="id" minOccurs="0" type="tipoId"/>
+            <xs:element name="duracion" minOccurs="0" type="tipoDur"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoDur">
+        <xs:attribute name="duracion" type="tipoAtrb"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoAtrb">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="100"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoVal">
+        <xs:restriction base="tipoAtrb">
+            <xs:minInclusive value="500" />
+            <xs:maxInclusive value="600" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoValor">
+        <xs:attribute name="duracion" type="tipoVal"/>
+    </xs:complexType>
+
+
+
+</xs:schema>
