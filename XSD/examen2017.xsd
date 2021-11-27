@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="losSimpson" type="tipoS"/>
     <xs:complexType name="tipoS">
-        <xs:choice>
-            <xs:element name="episodios" type="tipoEpisodios"/>
-            <xs:element name="secuela" type="tipoSecuela"/>
+        <xs:sequence>
             <xs:element name="personajes" type="tipoPers"/>
-        </xs:choice>
+            <xs:element name="episodios" type="tipoEpisodios"/>
+            <xs:element name="secuela" maxOccurs="unbounded" type="tipoSecuela"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="tipoPers" mixed="true">
@@ -38,11 +38,12 @@
 
     <xs:complexType name="tipoSecuela">
         <xs:sequence>
-            <xs:element name="noPublica" minOccurs="0" type="tipoValor"/>
-            <xs:element name="idioma" minOccurs="0" type="tipoIdioma"/>
-            <xs:element name="idiomaAux" minOccurs="0" type="tipoIdioma"/>
-            <xs:element name="id" minOccurs="0" type="tipoId"/>
             <xs:element name="duracion" minOccurs="0" type="tipoDur"/>
+            <xs:element name="noPublica" minOccurs="0" type="tipoValor"/>
+            <xs:element name="id" minOccurs="0" type="tipoId"/> 
+            <xs:element name="idioma" minOccurs="0" type="tipoIdioma"/>
+            <xs:element name="idiomaAux" minOccurs="0" type="tipoEspañol"/>
+            
         </xs:sequence>
     </xs:complexType>
 
@@ -68,6 +69,42 @@
         <xs:attribute name="duracion" type="tipoVal"/>
     </xs:complexType>
 
+    <xs:complexType name="tipoId">
+        <xs:attribute name="id" type="tipoPID"/>
+    </xs:complexType>
 
+    <xs:simpleType name="tipoPID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\w{2}\d\w{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoIdiomaEs">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ingles"/>
+            <xs:enumeration value="Chino"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoIdiomaEn">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Chinese"/>
+            <xs:enumeration value="Indian"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoUnIdioma">
+        <xs:union memberTypes="tipoIdiomaEn tipoIdiomaEs"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoIdioma">
+        <xs:list itemType="tipoUnIdioma"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoEspañol">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Español"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>
