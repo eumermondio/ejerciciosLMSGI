@@ -1,0 +1,21 @@
+. -> Representa cualquier caracter.
+\w -> Cualquier letra, mayúscula o minúscula.
+\d -> Un dígito.
+\D -> Cualquier carácter que no sea un dígito.
+\s -> Cualquier carácter similar a un espacio, como tabuladores, saltos de línea, etc.
+\S -> Cualquier carácter que no sea similar a un espacio.
+[abc] -> Cualquiera de los caracteres contenidos dentro de los corchetes, sólo se permitirá un único carácter.
+[A-Z] -> Intervalo de valores, se permitirá cualquiera que este dentro del intervalo. Recuerda que los caracteres están representados a través de datos numéricos.
+[^abc] -> Significa cualquier caracter que no sea alguno de los contenidos entre corchetes.
+(a|b) -> uno de los dos caracteres. A efectos prácticos sería igual a [ab].
+
+
+
+
+
+? -> De 0 a 1 ocurrencias.
+* -> De 0 a infinitas ocurrencias.
++ -> De 1 a infinitas ocurrencias.
+{n} -> n ocurrencias.
+{n,m} -> Mínimo de n ocurrencias y máximo de m.
+{n,} -> Mínimo de n ocurrencias y máximo de infinitas.
