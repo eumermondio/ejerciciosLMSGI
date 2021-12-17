@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+body {
+  background: linear-gradient(to bottom left, rgb(56, 56, 56), rgb(121, 121, 121));
+}
+
 #div1 {
   margin-top: 50px;
   margin-left: 13em;
@@ -42,4 +46,11 @@
   margin: auto;
   width: 20%;
 
+}
+
+div img:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+  border: 1px red solid;
+  cursor: zoom-in;
 }
