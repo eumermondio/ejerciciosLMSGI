@@ -1,0 +1,45 @@
+#img1 {
+  display: block;
+  margin: auto;
+  width: 70%;
+  height: 100%;
+}
+
+.i12 {
+  border: 1px black solid;
+  margin: auto;
+  width: 100%;
+}
+
+#div1 {
+  margin-top: 50px;
+  margin-left: 13em;
+  width: 900px;
+}
+
+#div2 {
+  margin-top: 50px;
+  margin-left: 13em;
+  width: 1000px;
+}
+
+.i121 {
+  border: 1px black solid;
+  margin: auto;
+  width: 100%;
+}
+
+.i13 {
+  display: inline-block;
+  margin: auto;
+  width: 30%;
+
+
+}
+
+.i14 {
+  display: inline-block;
+  margin: auto;
+  width: 20%;
+
+}
