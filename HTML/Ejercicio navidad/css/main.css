@@ -1,0 +1,141 @@
+/*Parte superior, menús y banner */
+#tituloColor {
+    color: rgb(36, 63, 187);
+    text-shadow: 3px black;
+}
+
+#titulo {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-bottom: 50px;
+}
+
+#menu li:hover {
+    transition: 0.4s;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px blue solid;
+    cursor: pointer;
+    color: white;
+}
+
+#cajaMenu {
+    margin: auto;
+    width: 80%;
+}
+
+#menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px rgba(0, 0, 0, 0) solid;
+    font-weight: 200;
+    margin: 0px 20px;
+}
+
+#menu {
+    margin: auto;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 12.7pt;
+
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+/*Parte media, contenido y tajetas */
+
+.tarjetas {
+    width: 23.5%;
+    border: 2px black solid;
+    border-radius: 3px;
+    margin: 10px;
+    background-color: rgb(211, 211, 211);
+    display: inline-block;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 300px;
+}
+
+#contenedor-tarjetas {
+    width: 100%;
+}
+
+a .tarjetas {
+    text-decoration: none;
+    color: black;
+}
+
+a .tarjetas:hover {
+    border: 2px blue solid;
+}
+
+.tarjetas h2 {
+    text-align: center;
+}
+
+#cats h1 {
+    text-align: center;
+}
+
+#cats {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+#empresa {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+/*
+
+.textoNormal {
+    font-size: 12.7pt !important;
+    text-align: justify;
+}
+
+*/
+
+#video {
+    margin: auto;
+    width: 100%;
+}
+
+#video p {
+text-align: justify;
+padding: 0px 6px 6px 6px;
+font-weight: bold;
+}
+
+.videos {
+    width: 31.9%;
+    border: 2px black solid;
+    border-radius: 3px;
+    margin: 10px;
+    background-color: rgb(211, 211, 211);
+    display: inline-block;
+    background-color: rgb(211, 211, 211);
+}
