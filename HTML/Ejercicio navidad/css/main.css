@@ -1,5 +1,7 @@
 /*Parte superior, menús y banner */
-#tituloColor {
+/*INDEX*/
+
+.tituloColor {
     color: rgb(36, 63, 187);
     text-shadow: 3px black;
 }
@@ -19,7 +21,6 @@
 }
 
 #menu li:hover {
-    transition: 0.4s;
     list-style: none;
     display: inline-block;
     padding: 10px;
@@ -36,6 +37,7 @@
 
 #menu li {
     list-style: none;
+    transition: 0.4s;
     display: inline-block;
     padding: 10px;
     text-align: center;
@@ -125,9 +127,9 @@ a .tarjetas:hover {
 }
 
 #video p {
-text-align: justify;
-padding: 0px 6px 6px 6px;
-font-weight: bold;
+    text-align: justify;
+    padding: 0px 6px 6px 6px;
+    font-weight: bold;
 }
 
 .videos {
@@ -138,4 +140,142 @@ font-weight: bold;
     background-color: rgb(211, 211, 211);
     display: inline-block;
     background-color: rgb(211, 211, 211);
+}
+
+
+/*FIN DE INDEX*/
+/*CATEGORIAS*/
+
+#tablamains img {
+    margin: auto;
+    height: 600px;
+    width: 100%;
+}
+
+#tablamains {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#tablamains,tr,td {
+    border: 1px solid black;
+}
+
+#boton1 {
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px black solid;
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+#boton1:hover {
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px black solid;
+    background-color: rgb(31, 31, 231);
+    font-weight: bold;
+    color: gainsboro;
+    cursor: pointer;
+}
+
+#cajaMenu1 {
+    margin: auto;
+    width: 37%;
+}
+
+#tabla2 th {
+    background-color: rgb(211, 211, 211);
+}
+
+#tabla2 {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+
+/*FIN DE CATEGORIAS*/
+/*PRECIOS*/
+
+#cajaMenu2 #menu li {
+   margin-left: 51.5em;
+}
+
+#contenedor-tarjetasP .tarjetas h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+#contenedor-tarjetasP, .tarjetas h4 {
+    text-align: center;
+}
+
+/*FIN DE PRECIOS*/
+/*TIENDA*/
+
+#contenedor-tarjetasT .tarjetas h4 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+#contenedor-tarjetasT .tarjetas h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+#contenedor-tarjetasT .tarjetas h3 {
+    text-align: center;
+}
+
+#contenedor-tarjetasT .tarjetas h3:hover {
+    text-align: center;
+    color: blue;
+}
+
+.tarjetas a {
+    text-decoration: none;
+    color: black;
+}
+
+/*FIN DE TIENDA*/
+/*COLECCIÓN*/
+
+
+
+/*ERROR*/
+
+#error {
+background-color: red;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Nunito', sans-serif;
+}
+
+#error img {
+    width: 37%;
+    height: 37%; 
+}
+
+#error a {
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
+}
+
+#error a:hover {
+    text-decoration: none;
+    color: rgb(199, 199, 199);
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
 }
