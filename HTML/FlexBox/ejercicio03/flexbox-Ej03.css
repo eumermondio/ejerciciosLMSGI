@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex;
+  height: 96vh;
+  flex-wrap: wrap;
+  border: 3px solid red;
+  text-align: center;
+}
+.flex-container > div {
+  width: 33%;
+}

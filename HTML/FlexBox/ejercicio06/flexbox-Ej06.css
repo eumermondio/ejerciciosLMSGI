@@ -1,0 +1,27 @@
+.flex-container {
+  display: flex;
+  height: 96hv;
+  align-items: baseline;
+}
+
+.flex-container>div {
+  text-align: center;
+  line-height: 0px;
+  font-size: 30px;
+}
+
+.flex-container>div>h5 {
+  font-size: 5px;
+}
+
+.flex-container>div>h2 {
+  font-size: 30pt;
+}
+
+.flex-container>div>h3 {
+  font-size: 15pt;
+}
+
+.flex-container>div>h4 {
+  font-size: 10pt;
+}

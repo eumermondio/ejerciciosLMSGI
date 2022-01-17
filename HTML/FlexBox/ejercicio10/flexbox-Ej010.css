@@ -1,0 +1,12 @@
+.flex-container {
+  display: flex;
+  border: 3px red solid;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 96vh;
+}
+
+.flex-container>div {
+  text-align: center;
+  width: 50%;
+}

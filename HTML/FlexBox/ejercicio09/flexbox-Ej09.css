@@ -1,0 +1,8 @@
+.flex-container {
+  display: flex;
+  border: 3px red solid;
+}
+
+.flex-container>div {
+  text-align: center;
+}

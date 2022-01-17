@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex;
+  height: 96vh;
+  border: 3px red solid;
+}
+
+.flex-container>div {
+  width: 100%;
+  text-align: center;
+}

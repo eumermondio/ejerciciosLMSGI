@@ -1,0 +1,7 @@
+.flex-container {
+  display: flex;
+  height: 96vh;
+  flex-direction: column-reverse;
+  border: 3px solid red;
+  text-align: center;
+}

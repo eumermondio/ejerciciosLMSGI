@@ -1,0 +1,18 @@
+.flex-container {
+  display: flex;
+  height: 96vh;
+  border: 3px red solid;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container>div {
+  width: 33.333333%;
+  text-align: center;
+}
+
+.flex-container>div[style="background-color: pink;"] {
+  justify-content: center;
+  align-items: center;
+}
