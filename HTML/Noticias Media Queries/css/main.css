@@ -7,6 +7,7 @@ html {
   background-color: red;
   padding: 10px;
   position: fixed;
+  margin: -10px;
 }
 
 .contenedor-menu img {
@@ -35,6 +36,17 @@ html {
   flex-wrap: wrap;
 }
 
+img[src="../media/foto.png"] {
+  height: 33vh;
+}
+
+img[src="../media/publi.png"] {
+  height: 33vh;
+}
+
+img[src="../media/publi3.png"] {
+  margin-top: 1vh;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -94,6 +106,10 @@ html {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
+  }
+
+  .publi {
+    display: none;
   }
 }
 
