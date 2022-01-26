@@ -31,7 +31,23 @@ html {
   width: 100%;
 }
 
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 400px;
+}
+
+.principal>div {
+  width: 50%;
+}
+
 .publi {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.noticia {
   display: flex;
   flex-wrap: wrap;
 }
@@ -110,6 +126,9 @@ img[src="../media/publi3.png"] {
 
   .publi {
     display: none;
+  }
+  .noticia {
+    width: 100%;
   }
 }
 
