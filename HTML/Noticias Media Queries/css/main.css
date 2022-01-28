@@ -2,6 +2,12 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .contenedor-menu {
   width: 100%;
   background-color: red;
@@ -27,22 +33,15 @@ html {
   float: left;
 }
 
-.publi img {
+.publicidad img {
   width: 100%;
 }
 
 .principal {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 400px;
 }
 
-.principal>div {
-  width: 50%;
-}
-
-.publi {
+.publicidad {
   display: flex;
   flex-wrap: wrap;
 }
@@ -65,7 +64,7 @@ img[src="../media/publi3.png"] {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 
   /* For desktop: */
   .col-1 {
@@ -117,22 +116,23 @@ img[src="../media/publi3.png"] {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
 
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
 
-  .publi {
+  .publicidad {
     display: none;
   }
+
   .noticia {
     width: 100%;
   }
 }
 
-.publi::after {
+.publicidad::after {
   content: "";
   clear: both;
   display: table;
