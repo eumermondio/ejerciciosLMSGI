@@ -1,4 +1,13 @@
+html {
+    box-sizing: border-box;
+}
 .iconos:hover {
     transition: 0.1s;
     color: red;
+}
+li {
+    border-bottom: 2px transparent solid;
+}
+li:hover {
+    border-bottom: 2px orange solid;
 }
