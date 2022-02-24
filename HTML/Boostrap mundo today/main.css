@@ -1,9 +1,6 @@
 html {
     box-sizing: border-box;
 }
-body {
-    background-image: linear-gradient(red,blue);
-}
 .iconos:hover {
     transition: 0.1s;
     color: red;
