@@ -11,3 +11,15 @@ li {
 li:hover {
     border-bottom: 2px orange solid;
 }
+footer i {
+    color: orange;
+}
+label {
+    font-weight: bolder;
+}
+.bg-custom {
+    background-color: rgb(227, 227, 227);
+}
+.bg-custom2 {
+    background-color: rgb(241, 241, 241);
+}
