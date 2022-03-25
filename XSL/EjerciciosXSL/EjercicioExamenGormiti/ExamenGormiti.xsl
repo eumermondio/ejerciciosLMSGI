@@ -11,7 +11,7 @@
                 <title>Gormiti</title>
             </head>
             <body>
-                <table>
+                <table width="100%">
                     <tr>
                         <th></th>
                         <th>Gormiti</th>
@@ -22,7 +22,7 @@
         <xsl:attribute name="style">background:
             <xsl:choose>
                 <xsl:when test="position() mod 2 = 1"> #00FAFF;</xsl:when>
-                <xsl:otherwise> #000AFF</xsl:otherwise>
+                <xsl:otherwise> #00CAFF</xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
         <td><xsl:value-of select="position()"/></td>
@@ -31,14 +31,90 @@
     </tr>
 </xsl:for-each>
                 </table>
+                <br/>
+                <table width="100%" border="1" style="background:url('{/gormitis/tablero/@url}') no-repeat;">
+                    
+                    <tr>
+                      <xsl:call-template name="casilla">
+                          <xsl:with-param name="x" select="0"/>
+                          <xsl:with-param name="y" select="0"></xsl:with-param>
+                      </xsl:call-template> 
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="1"/>
+                            <xsl:with-param name="y" select="0"></xsl:with-param>
+                        </xsl:call-template>  
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="2"/>
+                            <xsl:with-param name="y" select="0"></xsl:with-param>
+                        </xsl:call-template>  
+                    </tr>
+                    <tr>
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="0"/>
+                            <xsl:with-param name="y" select="1"></xsl:with-param>
+                        </xsl:call-template> 
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="1"/>
+                            <xsl:with-param name="y" select="1"></xsl:with-param>
+                        </xsl:call-template>  
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="2"/>
+                            <xsl:with-param name="y" select="1"></xsl:with-param>
+                        </xsl:call-template>  
+                    </tr>
+                    <tr>
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="0"/>
+                            <xsl:with-param name="y" select="2"></xsl:with-param>
+                        </xsl:call-template> 
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="1"/>
+                            <xsl:with-param name="y" select="2"></xsl:with-param>
+                        </xsl:call-template>  
+                        <xsl:call-template name="casilla">
+                            <xsl:with-param name="x" select="2"/>
+                            <xsl:with-param name="y" select="2"></xsl:with-param>
+                        </xsl:call-template>  
+                    </tr>
+                    
+                </table>
             </body>
         </html>
        
     </xsl:template>
+    
+    <xsl:template name="casilla">
+        <xsl:param name="x"/>
+        <xsl:param name="y"/>
+        <td>
+        <xsl:for-each select="/gormitis/tablero/gormitiEnMapa">
+            <xsl:if test="$x = @x and $y = @y">
+            <!--   <xsl:value-of select="@tribu"/> -->
+           <xsl:call-template name="buscaImgGromiti">
+               <xsl:with-param name="tribu" select="@tribu"/>
+           </xsl:call-template>
+            </xsl:if>
+        </xsl:for-each>
+        </td>
+    </xsl:template>
+    
+    <xsl:template name="buscaImgGromiti">
+        <xsl:param name="tribu"/>
+        <xsl:for-each select="/gormitis/gormiti">
+            <xsl:if test="$tribu = @tribu">
+                <img src="{.}"/>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template name="css">
         <style>
             img {
             width:50px;
+            }
+            th {
+            color:white;
+            background-color:blue;
             }
         </style>
     </xsl:template>
