@@ -60,6 +60,8 @@
                             </xsl:for-each>
                         </xsl:for-each>
                     </table>
+                    <br/>
+                    <br/>
                     <xsl:for-each select="/partidoBaloncesto/pista">
                         <table width="100%" style="background: url('{.}') no-repeat;"
                             id="tablaCancha">
@@ -68,19 +70,74 @@
                             </xsl:call-template>
                         </table>
                     </xsl:for-each>
+                    <br/>
+                    <br/>
+                    <table border="1" width="100%">
+
+                        <tr>
+                            <th>Tiempo</th>
+                            <th>Jugador</th>
+                            <th>Apodo</th>
+                            <th>Descripción</th>
+                            <th>Icono</th>
+                        </tr>
+                        <xsl:for-each select="/partidoBaloncesto/historico/entrada">
+                            <tr>
+                                <td>
+                                    <xsl:value-of select="@tiempo"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="@jugador"/>
+                                </td>
+                                <td>
+                                    <xsl:call-template name="jugadoresApodo">
+                                        <xsl:with-param name="jugador">
+                                            <xsl:value-of select="@jugador"/>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="."/>
+                                </td>
+                                <td>
+                                    <xsl:call-template name="imagenesHistorico">
+                                        <xsl:with-param name="tipo">
+                                            <xsl:value-of select="@tipo"/>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </td>
+                            </tr>
+                        </xsl:for-each>
+                    </table>
                 </div>
             </body>
         </html>
 
     </xsl:template>
 
+
+    <xsl:template name="imagenesHistorico">
+        <xsl:param name="tipo"/>
+        <xsl:for-each select="/partidoBaloncesto/historico/imagen">
+            <xsl:if test="$tipo = @tipo">
+               <img src="{.}"></img>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template name="jugadoresApodo">
+        <xsl:param name="jugador"/>
+        <xsl:for-each select="/partidoBaloncesto/equipo/jugador">
+            <xsl:if test="$jugador = @nombre">
+                <xsl:value-of select="@apodo"/>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+
     <xsl:template name="bucleForFila">
         <xsl:param name="i"/>
-        <xsl:if test="$i &lt;= 8">
+        <xsl:if test="$i &lt;= 5">
             <tr>
-                <td style="background: blue; color: white;">
-                    <xsl:value-of select="$i"/>
-                </td>
                 <xsl:call-template name="bucleForColumna">
                     <xsl:with-param name="i">
                         <xsl:value-of select="$i"/>
@@ -100,7 +157,7 @@
     <xsl:template name="bucleForColumna">
         <xsl:param name="i"/>
         <xsl:param name="j"/>
-        <xsl:if test="$j &lt;= 8">
+        <xsl:if test="$j &lt;= 10">
             <xsl:call-template name="celda">
                 <xsl:with-param name="x">
                     <xsl:value-of select="$j"/>
@@ -120,21 +177,14 @@
         </xsl:if>
     </xsl:template>
 
-
     <xsl:template name="celda">
         <xsl:param name="x"/>
         <xsl:param name="y"/>
         <td>
-            <xsl:for-each select="posicion">
-                <xsl:if test="$x = @x and $y = @y">
-                    <xsl:choose>
-                        <xsl:when test="@tipo = 'tanque'">
-                            <xsl:attribute name="style">background: red;</xsl:attribute>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:attribute name="style">background: black;</xsl:attribute>
-                        </xsl:otherwise>
-                    </xsl:choose>
+            <xsl:for-each select="/partidoBaloncesto/equipo/jugador">
+                <xsl:if test="$x = @posicionX and $y = @posicionY">
+                    <img src="{../@imagen}"/>
+                    <xsl:value-of select="@nombre"/>
                 </xsl:if>
             </xsl:for-each>
         </td>
