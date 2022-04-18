@@ -26,6 +26,7 @@
 
                         <xsl:for-each select="/partidoBaloncesto/equipo">
                             <xsl:for-each select="jugador">
+                                <xsl:sort select="@nombre" order="ascending"></xsl:sort>
                                 <tr>
                                     <xsl:attribute name="style">
                                         <xsl:if test="position() mod 2 = 1 and ../@tipo = 'Local'">
