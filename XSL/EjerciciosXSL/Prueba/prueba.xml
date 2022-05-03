@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prueba.xsl" ?>
+<videoclub nombre="VideoAlquiler Pérez">
+    <imagenes>
+        <imagen id="peliIt">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/it.jpg</imagen>    
+        <imagen id="peliDespertar">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/the-force-awakens.jpg</imagen>    
+        <imagen id="peliVengadores">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/vengadores-marvel.jpg</imagen>    
+        <imagen id="peliUltron">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/ultron.jpg</imagen>    
+        <imagen id="peliInfinityWar">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/infinityWar.jpg</imagen>    
+        <imagen id="juegoAssasins">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/assasins.jpg</imagen>    
+        <imagen id="juegoFarCry">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/far-cry-primal.png</imagen>    
+        <imagen id="juegoGodOfWar">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/god_of_war_ps4.jpg</imagen>    
+        <imagen id="juegoZelda">http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2018-febrero/Zelda.jpg</imagen> 
+        <color id="peliculas">fffcad</color>
+        <color id="videojuegos">aeffa8</color>
+    </imagenes>
+    <peliculas>
+        <pelicula orden="1" pegi="18" duracion="157 min" alquilerDiario="1.5 €" x="2" y="1" idImagen="peliIt">It</pelicula>
+        <pelicula orden="2" pegi="7" duracion="142 min" alquilerDiario="1.7 €" x="1" y="2" idImagen="peliDespertar">El despertar de la fuerza</pelicula>
+        <pelicula orden="4" pegi="7" duracion="137 min" alquilerDiario="1.2 €" x="2" y="3" idImagen="peliVengadores">Los Vengadores</pelicula>
+        <pelicula orden="5" pegi="7" duracion="139 min" alquilerDiario="1.5 €" x="1" y="3" idImagen="peliUltron">La era de Ultrón</pelicula>
+        <pelicula orden="3" pegi="7" duracion="150 min" alquilerDiario="235.5 €" x="3" y="3" idImagen="peliInfinityWar">Infinity War I</pelicula>
+    </peliculas>
+    <videojuegos>
+        <videoJuego orden="4" plataforma="XBox One" alquilerDiario="1.5 €" pegi="18" x="5" y="1" idImagen="juegoAssasins">Assasins Creed</videoJuego>
+        <videoJuego orden="3" plataforma="Playstation 4" alquilerDiario="1.5 €" pegi="18" x="4" y="4" idImagen="juegoFarCry">Far Cry Primal</videoJuego>
+        <videoJuego orden="1" plataforma="Playstation 4" alquilerDiario="1.5 €" pegi="18" x="3" y="4" idImagen="juegoGodOfWar">God of War 4</videoJuego>
+        <videoJuego orden="2" plataforma="Wii U" alquilerDiario="1.5 €" pegi="18" x="2" y="5" idImagen="juegoZelda">Zelda: Breath of the Wild</videoJuego>
+    </videojuegos>
+</videoclub>
